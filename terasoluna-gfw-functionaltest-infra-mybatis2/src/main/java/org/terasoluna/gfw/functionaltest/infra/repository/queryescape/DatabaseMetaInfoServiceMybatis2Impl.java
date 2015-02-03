@@ -26,10 +26,8 @@ public class DatabaseMetaInfoServiceMybatis2Impl extends
 
     @Override
     protected String getDatabaseIdInternal() {
-        // **Note**
-        // MyBatis2 version does not tell which database is used.
-        // This means that full-width escape tests (with Oracle 11gR1) are not supported with MyBatis2
-        return "UNKNOW";
+
+        return super.getDatabaseId();
     }
 
 }

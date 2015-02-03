@@ -18,8 +18,11 @@ package org.terasoluna.gfw.functionaltest.domain.service.queryescape;
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public abstract class AbstractDatabaseMetaInfoService implements
                                                      DatabaseMetaInfoService {
+    @Value("${database}")
     private String databaseId;
 
     private String oracleVersion;
@@ -42,7 +45,7 @@ public abstract class AbstractDatabaseMetaInfoService implements
     @PostConstruct
     public void init() {
         this.databaseId = getDatabaseIdInternal();
-        if ("oracle".equalsIgnoreCase(this.databaseId)) {
+        if ("ORACLE".equalsIgnoreCase(this.databaseId)) {
             this.oracleVersion = oracleVersionRetriever.getVersion();
         }
     }

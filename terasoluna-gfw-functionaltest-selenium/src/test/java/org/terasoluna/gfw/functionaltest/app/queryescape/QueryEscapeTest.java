@@ -896,7 +896,7 @@ public class QueryEscapeTest extends FunctionTestSupport {
 
     private boolean isWithFullWidth() {
         String databaseId = driver.findElement(By.id("databaseId")).getText();
-        if ("oracle".equals(databaseId)) {
+        if ("ORACLE".equals(databaseId)) {
             String databaseVersion = driver.findElement(
                     By.id("databaseVersion")).getText();
             String[] destStrArray = databaseVersion.split("\\.");
