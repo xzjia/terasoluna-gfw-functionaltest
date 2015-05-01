@@ -13,7 +13,7 @@
     <artifactId>terasoluna-gfw-functionaltest-initdb</artifactId>
 
     <properties>
-        <postgresql.version>9.3-1102-jdbc41</postgresql.version>
+        <db2jcc.version>10.5</db2jcc.version>
     </properties>
 
     <profiles>
@@ -47,6 +47,21 @@
                 <db.groupId>com.oracle</db.groupId>
                 <db.artifactId>ojdbc6</db.artifactId>
                 <db.version>${ojdbc6.version}</db.version>
+                <db.delimiterType>row</db.delimiterType>
+            </properties>
+        </profile>
+        <profile>
+            <id>db2</id>
+            <properties>
+                <db.encoding>UTF8</db.encoding>
+                <db.basedir>src/main/sqls/db2</db.basedir>
+                <db.url>jdbc:db2://localhost:50001/teradb</db.url>
+                <db.username>btiwanagah</db.username>
+                <db.password>Password_1</db.password>
+                <db.driver>com.ibm.db2.jcc.DB2Driver</db.driver>
+                <db.groupId>com.ibm</db.groupId>
+                <db.artifactId>db2jcc</db.artifactId>
+                <db.version>${db2jcc.version}</db.version>
                 <db.delimiterType>row</db.delimiterType>
             </properties>
         </profile>
