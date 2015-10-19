@@ -34,4 +34,4 @@ script:
   - mvn -U test -f terasoluna-gfw-functionaltest-selenium/pom.xml -Dorg.springframework-version=3.2.15.RELEASE
   - mvn -U dependency:list -f terasoluna-gfw-functionaltest-web/pom.xml | sort > old-deps.txt
   - mvn -U dependency:list -f terasoluna-gfw-functionaltest-web/pom.xml -Dorg.springframework-version=3.2.15.RELEASE | sort > new-deps.txt
-  - diff old-deps.txt new-deps.txt
+  - diff old-deps.txt new-deps.txt || true
