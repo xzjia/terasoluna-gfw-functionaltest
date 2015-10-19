@@ -32,6 +32,6 @@ script:
   - mvn -U install -f terasoluna-gfw-functionaltest-domain/pom.xml -Dspring.version=4.1.8.RELEASE
   - mvn -U install cargo:daemon-start -f terasoluna-gfw-functionaltest-web/pom.xml -P warpack-env,travis -Dspring.version=4.1.8.RELEASE
   - mvn -U test -f terasoluna-gfw-functionaltest-selenium/pom.xml -Dspring.version=4.1.8.RELEASE
-  - mvn -U dependency:list -f terasoluna-gfw-functionaltest-domain/pom.xml -Dspring.version=4.1.8.RELEASE | sort > old-deps.txt
+  - mvn -U dependency:list -f terasoluna-gfw-functionaltest-web/pom.xml | sort > old-deps.txt
   - mvn -U dependency:list -f terasoluna-gfw-functionaltest-web/pom.xml -Dspring.version=4.1.8.RELEASE | sort > new-deps.txt
   - diff old-deps.txt new-deps.txt || true
