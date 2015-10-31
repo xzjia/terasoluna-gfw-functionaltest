@@ -9,6 +9,7 @@ cache:
     - $HOME/.m2
 
 install:
+  - export MAVEN_OPTS=-Djava.security.egd=file:/dev/./urandom
   - pushd `pwd`
   - cd $HOME/build
   - if [[ -z $GFW_BRANCH ]]; then GFW_BRANCH=master; fi
@@ -31,4 +32,4 @@ script:
   - mvn -U install -f terasoluna-gfw-functionaltest-env/pom.xml -P tomcat8-postgresql
   - mvn -U install -f terasoluna-gfw-functionaltest-domain/pom.xml
   - mvn -U install cargo:daemon-start -f terasoluna-gfw-functionaltest-web/pom.xml -P warpack-env,travis
-  - mvn -U test -f terasoluna-gfw-functionaltest-selenium/pom.xml -Djava.security.egd=file:/dev/./urandom
+  - mvn -U test -f terasoluna-gfw-functionaltest-selenium/pom.xml
