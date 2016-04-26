@@ -178,6 +178,7 @@
     </dependencyManagement>
     <properties>
         <profile.directory>src/main</profile.directory>
+        <env.buildFinalName>${project.artifactId}-${project.version}</env.buildFinalName>
         <encoding>UTF-8</encoding>
         <java-version>1.6</java-version>
         <maven-failsafe-plugin.version>2.19</maven-failsafe-plugin.version>
@@ -209,54 +210,63 @@
             <id>interstage11-oracle</id>
             <properties>
                 <profile.directory>configs/interstage11-oracle</profile.directory>
+                <env.buildFinalName>${project.artifactId}-${project.version}-interstage11-oracle</env.buildFinalName>
             </properties>
         </profile>
         <profile>
             <id>jboss-postgresql</id>
             <properties>
                 <profile.directory>configs/jboss-postgresql</profile.directory>
+                <env.id>${project.artifactId}-${project.version}-jboss-postgresql</env.id>
             </properties>
         </profile>
         <profile>
             <id>tomcat-oracle</id>
             <properties>
                 <profile.directory>configs/tomcat-oracle</profile.directory>
+                <env.buildFinalName>${project.artifactId}-${project.version}-tomcat-oracle</env.buildFinalName>
             </properties>
         </profile>
         <profile>
             <id>tomcat-postgresql</id>
             <properties>
                 <profile.directory>configs/tomcat-postgresql</profile.directory>
+                <env.buildFinalName>${project.artifactId}-${project.version}-tomcat-postgresql</env.buildFinalName>
             </properties>
         </profile>
         <profile>
             <id>tomcat8-oracle</id>
             <properties>
                 <profile.directory>configs/tomcat8-oracle</profile.directory>
+                <env.buildFinalName>${project.artifactId}-${project.version}-tomcat8-oracle</env.buildFinalName>
             </properties>
         </profile>
         <profile>
             <id>tomcat8-postgresql</id>
             <properties>
                 <profile.directory>configs/tomcat8-postgresql</profile.directory>
+                <env.buildFinalName>${project.artifactId}-${project.version}-tomcat8-postgresql</env.buildFinalName>
             </properties>
         </profile>
         <profile>
             <id>weblogic-oracle</id>
             <properties>
                 <profile.directory>configs/weblogic-oracle</profile.directory>
+                <env.buildFinalName>${project.artifactId}-${project.version}-weblogic-oracle</env.buildFinalName>
             </properties>
         </profile>
         <profile>
             <id>webotx-oracle</id>
             <properties>
                 <profile.directory>configs/webotx-oracle</profile.directory>
+                <env.buildFinalName>${project.artifactId}-${project.version}-webotx-oracle</env.buildFinalName>
             </properties>
         </profile>
         <profile>
             <id>websphere-db2</id>
             <properties>
                 <profile.directory>configs/websphere-db2</profile.directory>
+                <env.buildFinalName>${project.artifactId}-${project.version}-websphere-db2</env.buildFinalName>
             </properties>
         </profile>
     </profiles>
