@@ -245,6 +245,12 @@
     <profiles>
         <profile>
             <id>travis</id>
+            <properties>
+                <cargo.jvmargs>-Xms2048m -Xmx2048m -Duser.language=ja
+                    -Duser.country=JP -Duser.timezone=Asia/Tokyo</cargo.jvmargs>
+                <maven.junit.fork>true</maven.junit.fork>
+                <maven.junit.jvmargs>-Xms2048m -Xmx2048m</maven.junit.jvmargs>
+            </properties>
             <dependencies>
                 <dependency>
                     <groupId>org.postgresql</groupId>
