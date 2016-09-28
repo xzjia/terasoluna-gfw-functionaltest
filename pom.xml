@@ -287,6 +287,13 @@
             </properties>
         </profile>
         <profile>
+            <id>interstage11-postgresql</id>
+            <properties>
+                <project.env.main.directory>configs/interstage11-postgresql</project.env.main.directory>
+                <project.env.buildFinalName>${project.artifactId}-${project.version}-interstage11-postgresql</project.env.buildFinalName>
+            </properties>
+        </profile>
+        <profile>
             <id>jboss-postgresql</id>
             <properties>
                 <project.env.main.directory>configs/jboss-postgresql</project.env.main.directory>
