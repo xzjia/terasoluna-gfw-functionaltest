@@ -121,6 +121,13 @@
                 <buildFinalName>${project.artifactId}-${project.version}-interstage11-oracle</buildFinalName>
             </properties>
         </profile>
+        <profile>
+            <id>interstage11-postgresql</id>
+            <properties>
+                <resource.directory>${basedir}/configs/interstage11-postgresql/resources</resource.directory>
+                <buildFinalName>${project.artifactId}-${project.version}-interstage11-postgresql</buildFinalName>
+            </properties>
+        </profile>
     </profiles>
 
     <dependencies>
